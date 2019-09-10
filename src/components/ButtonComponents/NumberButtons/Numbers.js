@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import {numbers, operators, specials} from '../../../data';
-import NumberButton  from '../NumberButtons/NumberButton'
+import {numbers} from "../../../data";
+import NumberButton  from "./NumberButton"
 
 //import any components needed
 
@@ -8,8 +8,9 @@ import NumberButton  from '../NumberButtons/NumberButton'
 
 const Numbers = (props) => {
   // STEP 2 - add the imported data to state
-  const [numberState, setNumberState] = useState(numbers);
+
   const { numbers } = props;
+
   console.log()
   return (
     <div>
@@ -18,10 +19,10 @@ const Numbers = (props) => {
        it any props needed by the child component*/}
       {
         numbers.map(
-          (numberName, index) => (
+          (number) => (
             <NumberButton 
-              key={numberName}
-              name={numberName}
+              key={number}
+              number={number} // if you mess with the LHS it breaks everything. The 
             />
           )
         )
@@ -29,3 +30,5 @@ const Numbers = (props) => {
     </div>
   );
 };
+
+export default Numbers;
