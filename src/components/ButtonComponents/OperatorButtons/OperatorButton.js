@@ -1,13 +1,15 @@
 import React from "react";
 
 const OperatorButton = (props) => {
-  const {operator } = props; // the name of the props here has to agree with the name on line 25 in Number.js
+  // const {operator } = props; 
+  // the name of the props here has to agree with the name on line 25 in Number.js
 
   return (
-    <button>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-      {operator}
-    </button>
+    <div>
+      {
+        <button>{props.char}</button>
+      }
+    </div>
   );
 };
 export default OperatorButton;
